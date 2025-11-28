@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Document Translator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="title">🌐 Document Translator</h1>
+        <p class="subtitle">Upload a document and translate it instantly into 15+ languages.</p>
+
+        <div class="upload-box">
+            <label for="fileInput" class="file-label">📄 Choose Text File</label>
+            <input type="file" id="fileInput" accept=".txt">
+        </div>
+
+        <label class="lang-label">Select Language</label>
+        <select id="languageSelect" class="dropdown">
+            <option value="">-- Choose a Language --</option>
+            <option>Hindi</option>
+            <option>Tamil</option>
+            <option>Telugu</option>
+            <option>Malayalam</option>
+            <option>Kannada</option>
+            <option>Gujarati</option>
+            <option>Marathi</option>
+            <option>Punjabi</option>
+            <option>Bengali</option>
+            <option>Odia</option>
+            <option>Assamese</option>
+            <option>Urdu</option>
+            <option>Sindhi</option>
+            <option>Nepali</option>
+            <option>Sinhala</option>
+        </select>
+
+        <button id="translateBtn" class="translate-btn">Translate Now</button>
+
+        <p id="statusMessage" class="status"></p>
+    </div>
+
+    <script src="{{ url_for('static', filename='translator.js') }}"></script>
+</body>
+</html>
